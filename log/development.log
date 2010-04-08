@@ -1,0 +1,1761 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-08 10:36:21) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (28.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20100408143709)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "thoughts" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100408143709')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("books")[0m
+  [4;36;1mBook Create (0.5ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:39:20', 'Rails!', '2010-04-08 14:39:20', 'Pretty sweet.')[0m
+  [4;35;1mBook Load (0.5ms)[0m   [0mSELECT * FROM "books" [0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 10:44:42) [GET]
+  [4;36;1mBook Load (0.6ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering books/index
+Completed in 67ms (View: 63, DB: 1) | 200 OK [http://localhost/books]
+  [4;36;1mBook Create (0.6ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;35;1mBook Create (0.5ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.4ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;35;1mBook Create (0.6ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.4ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:52:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Load (0.7ms)[0m   [0;1mSELECT * FROM "books" [0m
+  [4;36;1mBook Create (0.5ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;35;1mBook Create (0.3ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.2ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;35;1mBook Create (0.4ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.5ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:55:37', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.5ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;35;1mBook Create (0.3ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.3ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;35;1mBook Create (0.9ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+  [4;36;1mBook Create (0.4ms)[0m   [0;1mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '2010-04-08 14:58:38', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+
+Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.')[0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:17:51) [GET]
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering books/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:18:00) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mBook Load (0.8ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 10[0m
+Rendering books/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/books?page=2]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:18:02) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering books/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/books?page=1]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:20:22) [GET]
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 54ms (View: 47, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:20:26) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mBook Load (0.8ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 10[0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/books?page=2]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20100408143709)
+Migrating to CreateComments (20100408152057)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "author" varchar(255), "book_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100408152057')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("books")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Create (0.6ms)[0m   [0mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:23:26', 'Me', '2010-04-08 15:23:26', 'This is awesome', 1)[0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+  [4;35;1mBook Load (0.7ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:26:19) [GET]
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:26:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:26:28) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/books/4]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:26:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/books/4]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:28:32) [GET]
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:28:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-08 11:33:13) [GET]
+
+ActionController::RoutingError (No route matches "/books" with {:method=>:get}):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:34:50) [GET]
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:34:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 83ms (View: 10, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:37:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+
+ActionView::TemplateError (undefined method `book_comments_path' for #<ActionView::Base:0x10362d0f0>) on line #16 of app/views/books/show.html.erb:
+13: 
+14: <h3>Post Your Comments</h3>
+15: 
+16: <% form_for([@book, Comment.new]) do |form| %>
+17: 	<p><%= form.label :author %></p>
+18: 	<p><%= form.text_field :author %></p>
+19: 	
+
+    app/views/books/show.html.erb:16
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:38:11) [GET]
+  [4;36;1mBook Load (1.4ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:38:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+
+ActionView::TemplateError (undefined method `book_comments_path' for #<ActionView::Base:0x1032856f0>) on line #16 of app/views/books/show.html.erb:
+13: 
+14: <h3>Post Your Comments</h3>
+15: 
+16: <% form_for([@book, Comment.new]) do |form| %>
+17: 	<p><%= form.label :author %></p>
+18: 	<p><%= form.text_field :author %></p>
+19: 	
+
+    app/views/books/show.html.erb:16
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:39:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:40:01) [POST]
+  Parameters: {"comment"=>{"author"=>"Me", "text"=>"This is truly awesome!"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"1"}
+
+ArgumentError (Unknown key(s): author, text):
+  app/controllers/comments_controller.rb:3:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:40:41) [GET]
+  [4;36;1mBook Load (1.3ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 35ms (View: 27, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:40:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:40:47) [POST]
+  Parameters: {"comment"=>{"author"=>"Me", "text"=>"My Comment"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"1"}
+
+ArgumentError (Unknown key(s): author, text):
+  app/controllers/comments_controller.rb:3:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:43:49) [GET]
+  [4;36;1mBook Load (1.2ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:43:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 86ms (View: 12, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:43:55) [POST]
+  Parameters: {"comment"=>{"author"=>"asdf", "text"=>"asdf"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"1"}
+
+ArgumentError (Unknown key(s): author, text):
+  app/controllers/comments_controller.rb:3:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:47:06) [GET]
+  [4;36;1mBook Load (1.0ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/books/]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:47:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:47:14) [POST]
+  Parameters: {"comment"=>{"author"=>"Me", "text"=>"This sucks...."}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:47:14', 'Me', '2010-04-08 15:47:14', 'This sucks....', 1)[0m
+Redirected to http://localhost:3000/books/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/books/1/comments]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:47:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) [0m
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:49:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:49:58) [POST]
+  Parameters: {"comment"=>{"author"=>"Me", "text"=>"More to say..."}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:49:58', 'Me', '2010-04-08 15:49:58', 'More to say...', 1)[0m
+Redirected to http://localhost:3000/books/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/books/1/comments]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:49:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 28ms (View: 8, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:50:27) [POST]
+  Parameters: {"comment"=>{"author"=>"You", "text"=>"Here comes a new Challenger!"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:50:27', 'You', '2010-04-08 15:50:27', 'Here comes a new Challenger!', 1)[0m
+Redirected to http://localhost:3000/books/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/books/1/comments]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:50:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 34ms (View: 12, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:50:29) [GET]
+  Parameters: {"id"=>"1", "page"=>"2"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 3[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/books/1?page=2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:50:31) [GET]
+  Parameters: {"id"=>"1", "page"=>"1"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/books/1?page=1]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-08 11:54:26) [GET]
+
+SyntaxError (/Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/controllers/books_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-08 11:54:34) [GET]
+
+SyntaxError (/Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/controllers/books_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-08 11:55:06) [GET]
+
+SyntaxError (/Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/controllers/books_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#new (for 127.0.0.1 at 2010-04-08 11:55:31) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `net' for #<Class:0x1034ae148>):
+  /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/controllers/books_controller.rb:13:in `new'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#new (for 127.0.0.1 at 2010-04-08 11:55:57) [GET]
+Rendering template within layouts/application
+Rendering books/new
+Completed in 106ms (View: 101, DB: 0) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2010-04-08 11:56:16) [GET]
+Rendering template within layouts/application
+Rendering books/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2010-04-08 11:56:28) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book"=>{"title"=>"True Colors", "thoughts"=>"Pretty bad ass"}}
+  [4;35;1mBook Create (0.5ms)[0m   [0mINSERT INTO "books" ("created_at", "title", "updated_at", "thoughts") VALUES('2010-04-08 15:56:28', 'True Colors', '2010-04-08 15:56:28', 'Pretty bad ass')[0m
+Redirected to http://localhost:3000/books/17
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:56:28) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mBook Load (1.0ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 35ms (View: 15, DB: 1) | 200 OK [http://localhost/books/17]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:56:29) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/books/17]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:56:32) [GET]
+  [4;36;1mBook Load (1.2ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 88ms (View: 80, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 11:56:35) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mBook Load (0.9ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 10[0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/books?page=2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:56:38) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/books/17]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:56:54) [POST]
+  Parameters: {"comment"=>{"author"=>"Fi", "text"=>"I don't like the part where I get shot at...Just sayin'"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"17"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:56:54', 'Fi', '2010-04-08 15:56:54', 'I don''t like the part where I get shot at...Just sayin''', 17)[0m
+Redirected to http://localhost:3000/books/17
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/books/17/comments]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:56:54) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mBook Load (0.4ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://localhost/books/17]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:57:03) [POST]
+  Parameters: {"comment"=>{"author"=>"Niner", "text"=>"Pew Pew"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"17"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:57:03', 'Niner', '2010-04-08 15:57:03', 'Pew Pew', 17)[0m
+Redirected to http://localhost:3000/books/17
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/books/17/comments]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:57:04) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mBook Load (0.3ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/books/17]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-08 11:57:18) [POST]
+  Parameters: {"comment"=>{"author"=>"Skirata", "text"=>"Quit it you chakaars!"}, "commit"=>"Save", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "book_id"=>"17"}
+  [4;35;1mBook Load (0.3ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("created_at", "author", "updated_at", "text", "book_id") VALUES('2010-04-08 15:57:18', 'Skirata', '2010-04-08 15:57:18', 'Quit it you chakaars!', 17)[0m
+Redirected to http://localhost:3000/books/17
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/books/17/comments]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 11:57:18) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mBook Load (2.0ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 17) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 40ms (View: 8, DB: 3) | 200 OK [http://localhost/books/17]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:00:08) [GET]
+  [4;36;1mBook Load (1.0ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:00:13) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mBook Load (0.9ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 10[0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/books?page=2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:00:16) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 16) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 16) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 94ms (View: 84, DB: 0) | 200 OK [http://localhost/books/16]
+
+
+Processing BooksController#destroy (for 127.0.0.1 at 2010-04-08 12:00:19) [DELETE]
+  Parameters: {"authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"16"}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, index, new, and show):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:00:47) [GET]
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:00:50) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mBook Load (0.9ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 10[0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/books?page=2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:01:05) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 17) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/books/17]
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2010-04-08 12:01:07) [GET]
+  Parameters: {"id"=>"17"}
+
+ActionController::UnknownAction (No action responded to edit. Actions: create, index, new, and show):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#edit (for 127.0.0.1 at 2010-04-08 12:04:07) [GET]
+  Parameters: {"id"=>"17"}
+
+SyntaxError (/Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/controllers/books_controller.rb:31: syntax error, unexpected tCONSTANT, expecting kEND
+    @book Book.find params[:id]
+              ^
+/Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/controllers/books_controller.rb:43: syntax error, unexpected $end, expecting kEND):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#edit (for 127.0.0.1 at 2010-04-08 12:04:49) [GET]
+  Parameters: {"id"=>"17"}
+
+SyntaxError (/Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/controllers/books_controller.rb:43: syntax error, unexpected $end, expecting kEND):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2010-04-08 12:05:01) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering books/edit
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/books/17/edit]
+
+
+Processing BooksController#update (for 127.0.0.1 at 2010-04-08 12:05:06) [PUT]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"17", "book"=>{"title"=>"True Colors", "thoughts"=>"Pretty bad ass!"}}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;35;1mBook Update (0.4ms)[0m   [0mUPDATE "books" SET "updated_at" = '2010-04-08 16:05:06', "thoughts" = 'Pretty bad ass!' WHERE "id" = 17[0m
+Redirected to http://localhost:3000/books/17
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/books/17]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:05:06) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 17) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 17) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 17) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 37ms (View: 18, DB: 1) | 200 OK [http://localhost/books/17]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:05:13) [GET]
+  [4;35;1mBook Load (1.0ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:05:17) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mBook Load (0.9ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 10[0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/books?page=2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:05:21) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 16) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 16) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/books/16]
+
+
+Processing BooksController#destroy (for 127.0.0.1 at 2010-04-08 12:05:25) [DELETE]
+  Parameters: {"authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"16"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 16) [0m
+  [4;35;1mBook Destroy (0.3ms)[0m   [0mDELETE FROM "books" WHERE "id" = 16[0m
+
+NoMethodError (undefined method `title' for nil:NilClass):
+  app/controllers/books_controller.rb:41:in `destroy'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:06:31) [GET]
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:06:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 89ms (View: 14, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2010-04-08 12:06:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering books/edit
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/books/1/edit]
+
+
+Processing BooksController#update (for 127.0.0.1 at 2010-04-08 12:06:40) [PUT]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"1", "book"=>{"title"=>"Rails Rocks!", "thoughts"=>"Pretty sweet."}}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mBook Update (0.4ms)[0m   [0mUPDATE "books" SET "updated_at" = '2010-04-08 16:06:40', "title" = 'Rails Rocks!' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/books/1
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/books/1]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:06:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:06:47) [GET]
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:06:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 2) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 89ms (View: 9, DB: 1) | 200 OK [http://localhost/books/2]
+
+
+Processing BooksController#destroy (for 127.0.0.1 at 2010-04-08 12:06:52) [DELETE]
+  Parameters: {"authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"2"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+  [4;36;1mBook Destroy (0.3ms)[0m   [0;1mDELETE FROM "books" WHERE "id" = 2[0m
+
+NoMethodError (undefined method `title' for nil:NilClass):
+  app/controllers/books_controller.rb:43:in `destroy'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.2ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:07:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBook Load (0.1ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Book with ID=2):
+  app/controllers/books_controller.rb:8:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:07:58) [GET]
+  [4;36;1mBook Load (1.0ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:07:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 3) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 3) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/books/3]
+
+
+Processing BooksController#destroy (for 127.0.0.1 at 2010-04-08 12:08:03) [DELETE]
+  Parameters: {"authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"3"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 3) [0m
+  [4;35;1mBook Destroy (0.4ms)[0m   [0mDELETE FROM "books" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/books
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/books/3]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:08:03) [GET]
+  [4;36;1mBook Load (1.9ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 53ms (View: 9, DB: 2) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:08:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 4) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 4) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/books/4]
+
+
+Processing BooksController#destroy (for 127.0.0.1 at 2010-04-08 12:08:13) [DELETE]
+  Parameters: {"authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "id"=>"4"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 4) [0m
+  [4;35;1mBook Destroy (0.3ms)[0m   [0mDELETE FROM "books" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/books
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/books/4]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:08:13) [GET]
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/books]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20100408143709)
+Migrating to CreateComments (20100408152057)
+Migrating to CreateAdmins (20100408161412)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "persistence_token" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100408161412')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("admins")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("books")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;36;1mAdmin Load (0.2ms)[0m   [0;1mSELECT "admins".id FROM "admins" WHERE (LOWER("admins"."login") = 'jedi') LIMIT 1[0m
+  [4;35;1mAdmin Load (0.1ms)[0m   [0mSELECT "admins".id FROM "admins" WHERE ("admins"."persistence_token" = '7030c89c9ddeb83b531be020b5f44577bede125e9d3a4607f3ebdc77319c9d6962c507d3fd6e6988514256a89fc9f7a039708a94b9aefa77e4ce0d649e256fe7') LIMIT 1[0m
+  [4;36;1mAdmin Create (0.4ms)[0m   [0;1mINSERT INTO "admins" ("created_at", "crypted_password", "updated_at", "password_salt", "persistence_token", "login") VALUES('2010-04-08 16:24:28', 'b7880bc40657f3785638d8d333d5bbe4e3d5f8c86794b0edcd21ff482ee0237b03c82f907f9303c347f5cac70c2fbfca998b2959d70285341decd2ff91e28189', '2010-04-08 16:24:28', '1p78mVZMS6nIz-TUL-Rr', '7030c89c9ddeb83b531be020b5f44577bede125e9d3a4607f3ebdc77319c9d6962c507d3fd6e6988514256a89fc9f7a039708a94b9aefa77e4ce0d649e256fe7', 'jedi')[0m
+
+
+Processing AdminSessionsController#new (for 127.0.0.1 at 2010-04-08 12:24:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin_sessions"}
+Rendering template within layouts/application
+Rendering admin_sessions/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/admin_sessions/new.html.erb:
+1: <% title 'Login' %>
+2: 
+3: <% form_for @admin_session, :url => admin_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <p>
+6:     <%= f.label :login %><br />
+
+    app/views/admin_sessions/new.html.erb:3
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminSessionsController#new (for 127.0.0.1 at 2010-04-08 12:25:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin_sessions"}
+Rendering template within layouts/application
+Rendering admin_sessions/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/admin_sessions/new.html.erb:
+1: <% title 'Login' %>
+2: 
+3: <% form_for @admin_session, :url => admin_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <p>
+6:     <%= f.label :login %><br />
+
+    app/views/admin_sessions/new.html.erb:3
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminSessionsController#new (for 127.0.0.1 at 2010-04-08 12:26:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin_sessions"}
+Rendering template within layouts/application
+Rendering admin_sessions/new
+Completed in 28ms (View: 16, DB: 0) | 200 OK [http://localhost/admin_session/new]
+  [4;36;1mAdmin Load (0.3ms)[0m   [0;1mSELECT "admins".id FROM "admins" WHERE (LOWER("admins"."login") = 'jedi') LIMIT 1[0m
+  [4;35;1mAdmin Load (0.1ms)[0m   [0mSELECT "admins".id FROM "admins" WHERE ("admins"."persistence_token" = '25fc9de8b5828580666cd5be1845b2d3c68af40c5d8ee0552001961519961763ab8f857a73e8c5b47aaccac2590b4853e50a0299780c8af0ddd949f5de828b7d') LIMIT 1[0m
+
+
+Processing AdminSessionsController#new (for 127.0.0.1 at 2010-04-08 12:27:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin_sessions"}
+Rendering template within layouts/application
+Rendering admin_sessions/new
+Completed in 41ms (View: 30, DB: 0) | 200 OK [http://localhost/admin_session/new]
+
+
+Processing AdminSessionsController#create (for 127.0.0.1 at 2010-04-08 12:27:38) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "controller"=>"admin_sessions", "admin_session"=>{"password"=>"[FILTERED]", "login"=>"jedi"}}
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE (LOWER("admins".login) = 'jedi') LIMIT 1[0m
+Redirected to http://localhost:3000/books
+Completed in 177ms (DB: 0) | 302 Found [http://localhost/admin_session]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:27:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.2ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:30:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #22 of app/views/layouts/application.html.erb:
+19: 
+20:       <%= yield %>
+21: 
+22:       <% if current_admin %>
+23:         <p><%= link_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+24:       <% else %>
+25:         <p><%= link_to 'Login', new_admin_session_path %></p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/layouts/application.html.erb:22
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:30:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.2ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #22 of app/views/layouts/application.html.erb:
+19: 
+20:       <%= yield %>
+21: 
+22:       <% if current_admin %>
+23:         <p><%= link_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+24:       <% else %>
+25:         <p><%= link_to 'Login', new_admin_session_path %></p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/layouts/application.html.erb:22
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:31:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;35;1mAdmin Load (0.7ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #21 of app/views/layouts/application.html.erb:
+18: 
+19:       <%= yield %>
+20: 
+21:       <% if current_admin %>
+22:         <p><%= link_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+23:       <% else %>
+24:         <p><%= link_to 'Login', new_admin_session_path %></p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/layouts/application.html.erb:21
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#admin_session (for 127.0.0.1 at 2010-04-08 12:32:06) [GET]
+  Parameters: {"action"=>"admin_session", "id"=>"new", "controller"=>"books"}
+  [4;36;1mAdmin Load (0.3ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>):
+  app/controllers/application_controller.rb:23:in `current_admin'
+  app/controllers/books_controller.rb:51:in `login_required'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminSessionsController#new (for 127.0.0.1 at 2010-04-08 12:32:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin_sessions"}
+Rendering template within layouts/application
+Rendering admin_sessions/new
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #21 of app/views/layouts/application.html.erb:
+18: 
+19:       <%= yield %>
+20: 
+21:       <% if current_admin %>
+22:         <p><%= link_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+23:       <% else %>
+24:         <p><%= link_to 'Login', new_admin_session_path %></p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/layouts/application.html.erb:21
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:32:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;36;1mAdmin Load (0.6ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #10 of app/views/books/index.html.erb:
+7: 
+8: <%= will_paginate @books %>
+9: 
+10: <% if current_admin %>
+11: <p>
+12:   Admin actions: <%= link_to 'New Book', new_book_path %>
+13: </p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/books/index.html.erb:10
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:38:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #10 of app/views/books/index.html.erb:
+7: 
+8: <%= will_paginate @books %>
+9: 
+10: <% if current_admin %>
+11: <p>
+12:   Admin actions: <%= link_to 'New Book', new_book_path %>
+13: </p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/books/index.html.erb:10
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:39:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.3ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #21 of app/views/layouts/application.html.erb:
+18: 
+19:       <%= yield %>
+20: 
+21:       <% if current_admin %>
+22:         <p><%= link_to 'Logout', admin_session_path(current_admin_session), :method => :delete %></p>
+23:       <% else %>
+24:         <p><%= link_to 'Login', new_admin_session_path %></p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/layouts/application.html.erb:21
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:39:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:39:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #27 of app/views/books/show.html.erb:
+24: 	<%= form.submit 'Save' %>
+25: <% end %>
+26: 
+27: <% if current_admin %>
+28: <p>
+29: 	Admin Actions:
+30: 	<%= link_to 'Edit', edit_book_path(@book) %> | 
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/books/show.html.erb:27
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mAdmin Load (0.3ms)[0m   [0;1mSELECT "admins".id FROM "admins" WHERE (LOWER("admins"."login") = 'jedi') LIMIT 1[0m
+  [4;35;1mAdmin Load (0.1ms)[0m   [0mSELECT "admins".id FROM "admins" WHERE ("admins"."persistence_token" = '59ed09d6a293f8a5cc6cade88b9606fbd5509aec3e8234e82cba45e2758a0b865fc34b573cfb9b28b6beb94e44b8466af10f040f266e9d3dcb7d0a1bba4e6263') LIMIT 1[0m
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:44:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #27 of app/views/books/show.html.erb:
+24: 	<%= form.submit 'Save' %>
+25: <% end %>
+26: 
+27: <% if current_admin %>
+28: <p>
+29: 	Admin Actions:
+30: 	<%= link_to 'Edit', edit_book_path(@book) %> | 
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/books/show.html.erb:27
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:45:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.3ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `user' for #<AdminSession: {:unauthorized_record=>"<protected>"}>) on line #10 of app/views/books/index.html.erb:
+7: 
+8: <%= will_paginate @books %>
+9: 
+10: <% if current_admin %>
+11: <p>
+12:   Admin actions: <%= link_to 'New Book', new_book_path %>
+13: </p>
+
+    app/controllers/application_controller.rb:23:in `current_admin'
+    (eval):2:in `send'
+    (eval):2:in `current_admin'
+    app/views/books/index.html.erb:10
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:46:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+Completed in 32ms (View: 24, DB: 2) | 200 OK [http://localhost/books]
+
+
+Processing AdminSessionsController#new (for 127.0.0.1 at 2010-04-08 12:46:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin_sessions"}
+Rendering template within layouts/application
+Rendering admin_sessions/new
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+Completed in 25ms (View: 15, DB: 0) | 200 OK [http://localhost/admin_session/new]
+
+
+Processing AdminSessionsController#create (for 127.0.0.1 at 2010-04-08 12:46:43) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"create", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "controller"=>"admin_sessions", "admin_session"=>{"password"=>"[FILTERED]", "login"=>"jedi"}}
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE (LOWER("admins".login) = 'jedi') LIMIT 1[0m
+Redirected to http://localhost:3000/books
+Completed in 187ms (DB: 0) | 302 Found [http://localhost/admin_session]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:46:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.1ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+  [4;36;1mAdmin Load (0.4ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 22, DB: 2) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:46:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+  [4;36;1mAdmin Load (0.5ms)[0m   [0;1mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+Completed in 45ms (View: 32, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing AdminSessionsController#destroy to #<adminsession:0x10329f8c0> (for 127.0.0.1 at 2010-04-08 12:46:48) [DELETE]
+  Parameters: {"format"=>"#<adminsession:0x10329f8c0>", "action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"QuJixIqQzN9Jv85vG0/b1ZZzssZvzWW4MezK+GTHd7A=", "controller"=>"admin_sessions"}
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT * FROM "admins" WHERE ("admins"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/books
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/admin_session.%23%3Cadminsession:0x10329f8c0%3E]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:46:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.3ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 103ms (View: 16, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2010-04-08 12:47:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".book_id = 1) ORDER BY created_at ASC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".book_id = 1) [0m
+Rendering template within layouts/application
+Rendering books/show
+Completed in 30ms (View: 19, DB: 1) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2010-04-08 12:47:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"books"}
+Redirected to http://localhost:3000/books
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/books/new]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:47:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.5ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+Completed in 25ms (View: 16, DB: 2) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:50:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (1.1ms)[0m   [0mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+Completed in 110ms (View: 24, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2010-04-08 12:51:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (1.2ms)[0m   [0;1mSELECT * FROM "books" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "books" [0m
+Rendering template within layouts/application
+Rendering books/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47books47index46html46erb at /Users/alexsapountzis/Dropbox/Development/sandbox/bookshelf/app/views/books/index.html.erb:5)
+Completed in 56ms (View: 48, DB: 1) | 200 OK [http://localhost/]
